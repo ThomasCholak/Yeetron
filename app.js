@@ -2,9 +2,9 @@ document.addEventListener('DOMContentLoaded', function ()
 {
     start_str();
     if (/Mobi|Android/i.test(navigator.userAgent)) {
-        yyeet_anim();  // mobile browser
+        yeet_anim_mob();  // mobile browser
       } else {
-        yeet_anim_mob();  // non-mobile browser
+        yeet_anim();  // non-mobile browser
       }
 });
 
