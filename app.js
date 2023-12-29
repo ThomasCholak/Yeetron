@@ -1,14 +1,10 @@
 document.addEventListener('DOMContentLoaded', function ()
 {
     start_str();
-    yeet_anim();
-
     if (/Mobi|Android/i.test(navigator.userAgent)) {
-        // Code to execute on a mobile browser
-        console.log("This code is running on a mobile browser");
+        yeet_anim_mob();  // mobile browser
       } else {
-        // Code for non-mobile browsers
-        console.log("This code is running on a non-mobile browser");
+        yeet_anim();  // non-mobile browser
       }
 });
 
@@ -80,6 +76,36 @@ function yeet_anim()  // sets the frames of the animation
     "  | |   | |___  | |___     | |    | |\\ \\   | |_| |  |  |\\     |<br>" +
     "  | |   |     | |     |    | |    | | \\ \\  |     |  |  | \\    |<br>" +
     "   ￣    ￣￣￣   ￣￣￣     ￣     ￣   ￣   ￣￣￣   ￣￣  ￣￣";
+
+    var currentIndex = 0;
+    var texts = [yeet_str1, yeet_str2];
+  
+    setInterval(function ()
+    {
+      displayText(texts[currentIndex]);
+      currentIndex = (currentIndex + 1) % texts.length;
+    }, 400);
+}
+
+function yeet_anim()  // sets the frames of the animation
+{
+    var yeet_str1 = "<br>" +
+    " _   _   _____   _____   _______  <br>" +
+    "| | | | |  ___| |  ___| |       | <br>" +
+    "|_   _| | |___  | |___   ￣| |￣ <br>" +
+    "  | |   |  ___| |  ___|    | |    <br>" +
+    "  | |   | |___  | |___     | |    <br>" +
+    "  | |   |     | |     |    | |   <br>" +
+    "   ￣    ￣￣￣   ￣￣￣     ￣    ";
+
+    var yeet_str2 = "<br><br>" +
+    " _   _   _____   _____   _______  <br>" +
+    "| | | | |  ___| |  ___| |       | <br>" +
+    "|_   _| | |___  | |___   ￣| |￣  <br>" +
+    "  | |   |  ___| |  ___|    | |    <br>" +
+    "  | |   | |___  | |___     | |    <br>" +
+    "  | |   |     | |     |    | |    <br>" +
+    "   ￣    ￣￣￣   ￣￣￣     ￣     ";
 
     var currentIndex = 0;
     var texts = [yeet_str1, yeet_str2];
