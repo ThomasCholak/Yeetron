@@ -1,11 +1,10 @@
-document.addEventListener('DOMContentLoaded', function ()
-{
+document.addEventListener('DOMContentLoaded', function () {
     start_str();
-    if (/Mobi|Android/i.test(navigator.userAgent)) {
-        yeet_anim_mob();  // mobile browser
-      } else {
-        yeet_anim();  // non-mobile browser
-      }
+    if ('ontouchstart' in window || navigator.maxTouchPoints) {
+        yeet_anim_mob(); // Mobile browser
+    } else {
+        yeet_anim(); // Non-mobile browser
+    }
 });
 
 function start_str()  // loading screen
