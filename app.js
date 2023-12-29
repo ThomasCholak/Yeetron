@@ -87,7 +87,7 @@ function yeet_anim()  // sets the frames of the animation
     }, 400);
 }
 
-function yeet_anim()  // sets the frames of the animation
+function yeet_anim_mob()  // sets the frames of the animation
 {
     var yeet_str1 = "<br>" +
     " _   _   _____   _____   _______  <br>" +
