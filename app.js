@@ -15,16 +15,16 @@ function yeet_anim()  // sets the frames of the animation
     "  | |   |  ___| |  ___|    | |    |  ￣ /  | | | |  |         |<br>" +
     "  | |   | |___  | |___     | |    | |\\ \\   | |_| |  |  |\\     |<br>" +
     "  | |   |     | |     |    | |    | | \\ \\  |     |  |  | \\    |<br>" +
-    "   ￣    ￣￣￣   ￣￣￣     ￣     ￣   ￣   ￣￣￣   ￣￣  ￣￣";
+    "  ￣     ￣￣￣   ￣￣￣    ￣      ￣   ￣   ￣￣￣   ￣￣  ￣￣";
 
-    var yeet_str2 = "<br><br>" +
-    " _   _   _____   _____   _______   _____    _____    ____   __<br>" +
-    "| | | | |  ___| |  ___| |       | |     \\  |     |  |    \\ |  |<br>" +
-    "|_   _| | |___  | |___   ￣| |￣  | |￣| | | |￣| |  |     \\|  |<br>" +
-    "  | |   |  ___| |  ___|    | |    |  ￣ /  | | | |  |         |<br>" +
-    "  | |   | |___  | |___     | |    | |\\ \\   | |_| |  |  |\\     |<br>" +
-    "  | |   |     | |     |    | |    | | \\ \\  |     |  |  | \\    |<br>" +
-    "   ￣    ￣￣￣   ￣￣￣     ￣     ￣   ￣   ￣￣￣   ￣￣  ￣￣";
+    var yeet_str2 = "<br>" +
+    "&nbsp; _   _   _____   _____   _______   _____    _____    ____   __<br>" +
+    "&nbsp;| | | | |  ___| |  ___| |       | |     \\  |     |  |    \\ |  |<br>" +
+    "&nbsp;|_   _| | |___  | |___   ￣| |￣  | |￣| | | |￣| |  |     \\|  |<br>" +
+    "&nbsp;  | |   |  ___| |  ___|    | |    |  ￣ /  | | | |  |         |<br>" +
+    "&nbsp;  | |   | |___  | |___     | |    | |\\ \\   | |_| |  |  |\\     |<br>" +
+    "&nbsp;  | |   |     | |     |    | |    | | \\ \\  |     |  |  | \\    |<br>" +
+    "&nbsp;  ￣     ￣￣￣   ￣￣￣    ￣      ￣   ￣   ￣￣￣   ￣￣  ￣￣";
 
     var currentIndex = 0;
     var texts = [yeet_str1, yeet_str2];
@@ -44,16 +44,16 @@ function yeet_anim_mob()  // sets the frames of the animation
     "  | |   |  ___| |  ___|    | |    <br>" +
     "  | |   | |___  | |___     | |    <br>" +
     "  | |   |     | |     |    | |   <br>" +
-    "   ￣    ￣￣￣   ￣￣￣      ￣    ";
+    "  ￣     ￣￣￣   ￣￣￣     ￣    ";
 
-    var yeet_str2 = "<br><br>" +
-    " _   _   _____   _____   _______  <br>" +
-    "| | | | |  ___| |  ___| |       | <br>" +
-    "|_   _| | |___  | |___   ￣| |￣  <br>" +
-    "  | |   |  ___| |  ___|    | |    <br>" +
-    "  | |   | |___  | |___     | |    <br>" +
-    "  | |   |     | |     |    | |    <br>" +
-    "   ￣    ￣￣￣   ￣￣￣      ￣     ";
+    var yeet_str2 = "<br>" +
+    "&nbsp; _   _   _____   _____   _______  <br>" +
+    "&nbsp;| | | | |  ___| |  ___| |       | <br>" +
+    "&nbsp;|_   _| | |___  | |___   ￣| |￣  <br>" +
+    "&nbsp;  | |   |  ___| |  ___|    | |    <br>" +
+    "&nbsp;  | |   | |___  | |___     | |    <br>" +
+    "&nbsp;  | |   |     | |     |    | |    <br>" +
+    "&nbsp;  ￣     ￣￣￣   ￣￣￣     ￣     ";
 
     var currentIndex = 0;
     var texts = [yeet_str1, yeet_str2];
@@ -64,11 +64,15 @@ function yeet_anim_mob()  // sets the frames of the animation
     }, 1000);
 }
 
-function displayText(text, targetElement) {
+function displayText(text) {
     var console_str = '<pre>' + text + '</pre>';
     desktopHeader.innerHTML = console_str;
 }
 
+function displayText_mob(text) {  // function for mobile
+    var console_str = '<pre>' + text + '</pre>';
+    mobileHeader.innerHTML = console_str;
+}
 function displayText_mob(text, targetElement) {
     var console_str = '<pre>' + text + '</pre>';
     mobileHeader.innerHTML = console_str;
