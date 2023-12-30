@@ -5,6 +5,10 @@ body {
   
 #desktopHeader {
     display: block;
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    font-size: 20px;
   }
   
 .mobile-only {
@@ -14,6 +18,10 @@ body {
 @media only screen and (max-width: 768px) {
     #mobileHeader {
       display: block;
+      position: absolute;
+      top: 0px;
+      left: 10px;
+      font-size: 20px;
     }
   
 #desktopHeader {
