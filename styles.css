@@ -3,3 +3,20 @@ body {
     color: white;
   }
   
+#desktopHeader {
+    display: block;
+  }
+  
+.mobile-only {
+    display: none;
+  }
+  
+@media only screen and (max-width: 768px) {
+    #mobileHeader {
+      display: block;
+    }
+  
+#desktopHeader {
+      display: none;
+    }
+  }
