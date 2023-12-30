@@ -3,39 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yeetron</title>
+  <title>Yeetron.net</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+  <script type="module" src="main.js"></script>
     
-<header id="desktopHeader">
-  <pre><p>
+  <header id="desktopHeader">
+    <pre><p>
  _   _   _____   _____   _______   _____    _____    ____   __
 | | | | |  ___| |  ___| |       | |     \  |     |  |    \ |  |
 |_   _| | |___  | |___   ￣| |￣  | |￣| | | |￣| |  |     \|  |
   | |   |  ___| |  ___|    | |    |  ￣ /  | | | |  |         |
   | |   | |___  | |___     | |    | |\ \   | |_| |  |  |\     |
   | |   |     | |     |    | |    | | \ \  |     |  |  | \    |
-   ￣    ￣￣￣   ￣￣￣     ￣     ￣   ￣   ￣￣￣   ￣￣  ￣￣
-  </p></pre>
-</header>
+  ￣     ￣￣￣   ￣￣￣    ￣      ￣   ￣   ￣￣￣   ￣￣  ￣￣
+    </p></pre>
+  </header>
 
-<header id="mobileHeader" class="mobile-only">
-  <p><pre>
+  <header id="mobileHeader" class="mobile-only">
+    <p><pre>
  _   _   _____   _____   _______
 | | | | |  ___| |  ___| |       |
 |_   _| | |___  | |___   ￣| |￣
   | |   |  ___| |  ___|    | |
   | |   | |___  | |___     | | 
   | |   |     | |     |    | |
-   ￣    ￣￣￣   ￣￣￣     ￣ 
-  </pre></p>
-</header>
+  ￣     ￣￣￣   ￣￣￣    ￣ 
+    </pre></p>
+  </header>
 
-<body>
-    <script src="app.js"></script>
-</body>
+  <script src="app.js"></script>
+
+  <!-- Scripting javascript file to allow for 3D models -->
+  <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three/examples/jsm/"
+      }
+    }
+  </script>
 
 </body>
 </html>
-
