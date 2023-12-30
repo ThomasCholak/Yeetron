@@ -1,10 +1,50 @@
+// animating text on the screen
+
 document.addEventListener('DOMContentLoaded', function () {
-    if (('ontouchstart' in window || navigator.maxTouchPoints) && window.innerWidth <= 768) {  // fix for laptops with touch features
+    if ('ontouchstart' in window || navigator.maxTouchPoints) {  // checks for mobile or laptop device
         yeet_anim_mob(); // Mobile browser
     } else {
         yeet_anim(); // Non-mobile browser
+        tabs_str();
+        tabs_str2();
     }
 });
+
+function tabs_str() {  //animation "_" around the tab keys
+    let res_str = "";
+    let i = 0;
+
+    var intervalId = setInterval(function() {
+        res_str += "-";
+
+        desktopIndex.innerHTML = res_str;  // top-horizontal lines
+        desktopIndex2.innerHTML = res_str; // bottom-horizontal line
+
+        i++;
+        if (i === 50) {  // exits once interval equals 50
+            clearInterval(intervalId);  
+        }
+    }, 50);
+}
+
+
+function tabs_str2() {  // function to aniumate vertical "|" bars
+    let res_str = "";
+    let i = 0;
+    var intervalId = setInterval(function() {
+        res_str += "|<br>";
+
+        desktopIndex3.innerHTML = res_str; // left-most vertical line
+        desktopIndex4.innerHTML = res_str;
+        desktopIndex5.innerHTML = res_str;
+        desktopIndex6.innerHTML = res_str;
+
+        i++;
+        if (i === 3) {
+            clearInterval(intervalId);  
+        }
+    }, 1000);
+}
   
 function yeet_anim()  // sets the frames of the animation
 {
@@ -35,7 +75,7 @@ function yeet_anim()  // sets the frames of the animation
     }, 1000);
 }
 
-function yeet_anim_mob()  // sets the frames of the animation
+function yeet_anim_mob()  // sets the frames of anim (mobile)
 {
     var yeet_str1 = "<br>" +
     " _   _   _____   _____   _______  <br>" +
@@ -64,16 +104,12 @@ function yeet_anim_mob()  // sets the frames of the animation
     }, 1000);
 }
 
-function displayText(text) {
+function displayText(text) {  // replaces previous string with string of current index
     var console_str = '<pre>' + text + '</pre>';
     desktopHeader.innerHTML = console_str;
 }
 
 function displayText_mob(text) {  // function for mobile
-    var console_str = '<pre>' + text + '</pre>';
-    mobileHeader.innerHTML = console_str;
-}
-function displayText_mob(text, targetElement) {
     var console_str = '<pre>' + text + '</pre>';
     mobileHeader.innerHTML = console_str;
 }
