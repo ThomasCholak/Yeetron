@@ -14,8 +14,43 @@ body {
 .mobile-only {
     display: none;
   }
+
+#desktopIndex, #desktopIndex2 {  /* formatting for tab bar animation */
+    display: block;
+    position: absolute;
+    left: 20px;
+    font-size: 40px;
+}
+
+#desktopIndex {  /* top horizontal bar */
+  top: 500px;
+}
+
+#desktopIndex2 {  /* bottom horizontal bar */
+    top: 600px;
+}
+
+#desktopIndex3, #desktopIndex4, #desktopIndex5, #desktopIndex6 {  /* formatting for vertical bars */
+    display: block;
+    position: absolute;
+    font-size: 29px;
+    top:526px;
+}
+
+#desktopIndex3 {  /* left-most vertical bar */
+  left: 20px;
+}
+#desktopIndex4 {
+  left: 235px;
+}
+#desktopIndex5 {
+  left: 470px;
+}
+#desktopIndex6 {  /* right-most vertical bar */
+  left: 685px;
+}
   
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {  /* mobile functions */
     #mobileHeader {
       display: block;
       position: absolute;
@@ -24,7 +59,12 @@ body {
       font-size: 20px;
     }
   
-#desktopHeader {
+  #desktopHeader {
       display: none;
     }
+
+  #desktopIndex, #desktopIndex2, #desktopIndex3,
+  #desktopIndex4, #desktopIndex5, #desktopIndex6 {  /* prevents long animation from displaying on mobile */
+      display:none;
+  }
   }
