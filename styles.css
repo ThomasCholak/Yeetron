@@ -11,6 +11,32 @@ body {
     font-size: 20px;
   }
   
+/* Section for Buttons */
+#aboutMe, #enterD, #gamesb {
+  display: block;
+  position: absolute;
+  font-family: 'Courier New', monospace;
+}
+
+#aboutMe {
+    top: 525px;
+    left: 44px;
+    font-size: 35px;
+}
+
+#enterD {
+  top: 505px;
+  left: 243px;
+  font-size: 34px;
+  text-align: center;
+}
+
+#gamesb {
+  top: 525px;
+  left: 520px;
+  font-size: 35px;
+}
+
 .mobile-only {
     display: none;
   }
@@ -51,20 +77,22 @@ body {
 }
   
 @media only screen and (max-width: 768px) {  /* mobile functions */
-    #mobileHeader {
-      display: block;
-      position: absolute;
-      top: 0px;
-      left: 10px;
-      font-size: 20px;
+  #mobileHeader {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    font-size: 20px;
     }
   
   #desktopHeader {
       display: none;
     }
 
+    /* blocks desktop features from displaying on mobile */
   #desktopIndex, #desktopIndex2, #desktopIndex3,
-  #desktopIndex4, #desktopIndex5, #desktopIndex6 {  /* prevents long animation from displaying on mobile */
+  #desktopIndex4, #desktopIndex5, #desktopIndex6,
+  #aboutMe, #enterD, #gamesb {
       display:none;
   }
-  }
+}
