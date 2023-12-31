@@ -37,46 +37,12 @@ body {
   font-size: 35px;
 }
 
-.mobile-only {
+.mobile-only, #aboutMe_mob, #enterD_mob, #gamesb_mob {  /*hides header if you are using mobile */
     display: none;
   }
 
-#desktopIndex, #desktopIndex2 {  /* formatting for tab bar animation */
-    display: block;
-    position: absolute;
-    left: 20px;
-    font-size: 40px;
-}
-
-#desktopIndex {  /* top horizontal bar */
-  top: 500px;
-}
-
-#desktopIndex2 {  /* bottom horizontal bar */
-    top: 600px;
-}
-
-#desktopIndex3, #desktopIndex4, #desktopIndex5, #desktopIndex6 {  /* formatting for vertical bars */
-    display: block;
-    position: absolute;
-    font-size: 29px;
-    top:526px;
-}
-
-#desktopIndex3 {  /* left-most vertical bar */
-  left: 20px;
-}
-#desktopIndex4 {
-  left: 235px;
-}
-#desktopIndex5 {
-  left: 470px;
-}
-#desktopIndex6 {  /* right-most vertical bar */
-  left: 685px;
-}
-  
-@media only screen and (max-width: 768px) {  /* mobile functions */
+/* mobile functions */
+@media only screen and (max-width: 768px) {
   #mobileHeader {
     display: block;
     position: absolute;
@@ -84,14 +50,35 @@ body {
     left: 10px;
     font-size: 20px;
     }
+
+  #aboutMe_mob, #enterD_mob, #gamesb_mob {
+    display: block;
+    position: absolute;
+    font-family: 'Courier New', monospace;
+    font-size: 35px;
+    left: 35px;
+    font-size: 35px;
+  }
+
+  /* Have to position each button here*/
+  #aboutMe_mob {
+    top: 270px;
+  }
+
+  #enterD_mob {
+    top: 350px;
+  }
+
+  #gamesb_mob {
+    top: 470px;
+    left: 44px;
+  }
   
   #desktopHeader {
       display: none;
     }
 
     /* blocks desktop features from displaying on mobile */
-  #desktopIndex, #desktopIndex2, #desktopIndex3,
-  #desktopIndex4, #desktopIndex5, #desktopIndex6,
   #aboutMe, #enterD, #gamesb {
       display:none;
   }
