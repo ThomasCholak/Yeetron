@@ -7,8 +7,65 @@ document.addEventListener('DOMContentLoaded', function () {
         yeet_anim(); // Non-mobile browser
         tabs_str();
         tabs_str2();
+        highlight();
     }
 });
+
+// https://www.shecodes.io/athena/73101-how-to-highlight-text-when-cursor-is-on-it
+function highlight() {  // code to highlight text
+    const textToHighlight = document.getElementById('aboutMe');
+
+    // About Me button
+    aboutMe.addEventListener('mouseenter', () => {
+        aboutMe.style.backgroundColor = 'white';
+    });
+
+    aboutMe.addEventListener('mouseleave', () => {
+        aboutMe.style.backgroundColor = '';
+    });
+
+    aboutMe.addEventListener('mouseenter', () => {
+        aboutMe.style.color = 'black';
+    });
+
+    aboutMe.addEventListener('mouseleave', () => {
+        aboutMe.style.color = 'white';
+    });
+
+    // Enter the Dungeon button
+    enterD.addEventListener('mouseenter', () => {
+        enterD.style.backgroundColor = 'white';
+    });
+
+    enterD.addEventListener('mouseleave', () => {
+        enterD.style.backgroundColor = '';
+    });
+
+    enterD.addEventListener('mouseenter', () => {
+        enterD.style.color = 'black';
+    });
+
+    enterD.addEventListener('mouseleave', () => {
+        enterD.style.color = 'white';
+    });
+
+    // Games button
+    gamesb.addEventListener('mouseenter', () => {
+        gamesb.style.backgroundColor = 'white';
+    });
+
+    gamesb.addEventListener('mouseleave', () => {
+        gamesb.style.backgroundColor = '';
+    });
+
+    gamesb.addEventListener('mouseenter', () => {
+        gamesb.style.color = 'black';
+    });
+
+    gamesb.addEventListener('mouseleave', () => {
+        gamesb.style.color = 'white';
+    });
+}
 
 function tabs_str() {  //animation "_" around the tab keys
     let res_str = "";
