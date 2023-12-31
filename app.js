@@ -76,7 +76,7 @@ function highlight_mob() {  // code to highlight text
         aboutMe_mob.style.backgroundColor = '';
     });
 
-    aboutMe.addEventListener('touchstart', () => {
+    aboutMe_mob.addEventListener('touchstart', () => {
         aboutMe_mob.style.color = 'black';
     });
 
