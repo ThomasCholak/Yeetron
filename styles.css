@@ -1,8 +1,13 @@
 body {
     background-color: black;
     color: white;
+    margin: 0;
   }
-  
+
+canvas { 
+  display: block;
+}
+
 #desktopHeader {
     display: block;
     position: absolute;
@@ -11,6 +16,11 @@ body {
     font-size: 20px;
   }
   
+a {
+    text-decoration: none;  /* stops links being highlighted blue/purple */
+    color: inherit;
+  }
+
 /* Section for Buttons */
 #aboutMe, #enterD, #gamesb {
   display: block;
