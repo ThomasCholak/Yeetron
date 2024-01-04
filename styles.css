@@ -1,89 +1,187 @@
 body {
-    background-color: black;
-    color: white;
-  }
-  
-#desktopHeader {
-    display: block;
-    position: absolute;
-    top: 0px;
-    left: 10px;
-    font-size: 20px;
-  }
+  background-color: black;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+}
 
-a {
-    text-decoration: none;  /* stops links being highlighted blue/purple */
-    color: inherit;
-  }
-  
-/* Section for Buttons */
-#aboutMe, #enterD, #gamesb {
+/* thank you! - https://stackoverflow.com/questions/18772154/white-space-at-top-of-page */
+/* gets rid of weird line space at top of page*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+#desktopHeader {
   display: block;
   position: absolute;
-  font-family: 'Courier New', monospace;
+  top: 0px;
+  left: 10px;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;  /* stops links being highlighted blue/purple */
+  color: inherit;
+}
+
+/* Section for Buttons */
+#aboutMe, #enterD, #gamesb {
+display: block;
+position: absolute;
+font-family: 'Courier New', monospace;
 }
 
 #aboutMe {
-    top: 525px;
-    left: 44px;
-    font-size: 35px;
-}
-
-#enterD {
-  top: 505px;
-  left: 243px;
-  font-size: 34px;
-  text-align: center;
-}
-
-#gamesb {
   top: 525px;
-  left: 520px;
+  left: 44px;
   font-size: 35px;
 }
 
+#enterD {
+top: 505px;
+left: 243px;
+font-size: 34px;
+text-align: center;
+}
+
+#gamesb {
+top: 525px;
+left: 520px;
+font-size: 35px;
+}
+
 .mobile-only, #aboutMe_mob, #enterD_mob, #gamesb_mob {  /*hides header if you are using mobile */
-    display: none;
-  }
+  display: none;
+}
 
 /* mobile functions */
 @media only screen and (max-width: 768px) {
-  #mobileHeader {
+#mobileHeader {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  font-size: 20px;
+  }
+
+#aboutMe_mob, #enterD_mob, #gamesb_mob {
+  display: block;
+  position: absolute;
+  font-family: 'Courier New', monospace;
+  font-size: 35px;
+  left: 35px;
+  font-size: 35px;
+}
+
+/* Have to position each button here*/
+#aboutMe_mob {
+  top: 270px;
+}
+
+#enterD_mob {
+  top: 350px;
+}
+
+#gamesb_mob {
+  top: 470px;
+}
+
+#desktopHeader {
+    display: none;
+  }
+
+  /* blocks desktop features from displaying on mobile */
+#aboutMe, #enterD, #gamesb {
+    display:none;
+}
+}
+
+/* loading screen stuff */
+/* source: https://jsfiddle.net/sojzu8a5/1/ */
+
+#loading-screen {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000000;
+	opacity: 1;
+ 	transition: 1s opacity;
+}
+
+#loading-screen.fade-out {
+    opacity: 0;
+}
+
+#loader {
     display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #9370DB;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+#loader:before {
+    content: "";
     position: absolute;
-    top: 0px;
-    left: 10px;
-    font-size: 20px;
-    }
-
-  #aboutMe_mob, #enterD_mob, #gamesb_mob {
-    display: block;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #BA55D3;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+#loader:after {
+    content: "";
     position: absolute;
-    font-family: 'Courier New', monospace;
-    font-size: 35px;
-    left: 35px;
-    font-size: 35px;
-  }
-
-  /* Have to position each button here*/
-  #aboutMe_mob {
-    top: 270px;
-  }
-
-  #enterD_mob {
-    top: 350px;
-  }
-
-  #gamesb_mob {
-    top: 470px;
-  }
-  
-  #desktopHeader {
-      display: none;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #FF00FF;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+@-webkit-keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
     }
-
-    /* blocks desktop features from displaying on mobile */
-  #aboutMe, #enterD, #gamesb {
-      display:none;
-  }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
