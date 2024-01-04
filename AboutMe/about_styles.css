@@ -1,0 +1,26 @@
+body {  /* limits body to size of screen */
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+
+#fadingText {
+    font-size: 40px;
+    color: whitesmoke;
+    opacity: 1;  /* full opacity (100%) */
+    position: fixed;
+    top: 60%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+  }
+
+#scrollText {
+    position: fixed;
+    color: whitesmoke;
+    text-align: center;
+    top: 140%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+  }
