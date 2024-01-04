@@ -28,6 +28,7 @@ new RGBELoader()
 
 		scene.background = texture;
 		scene.environment = texture;
+        document.getElementById('loading-screen').style.display = 'none';  // removes loading screen
 
 } );
 
@@ -74,7 +75,7 @@ water = new Water(
 		waterNormals: new THREE.TextureLoader().load( 'waternormals.jpg', function (texture) {
 
 			texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
-
+            
 		} ),
 		sunDirection: new THREE.Vector3(),
 		sunColor: 0xffffff,
