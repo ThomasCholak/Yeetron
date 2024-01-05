@@ -19,7 +19,7 @@ body {  /* limits body to size of screen */
     position: fixed;
     color: whitesmoke;
     text-align: center;
-    top: 1200px;  /* attempt to fix for larger monitors */
+    top: 150%;
     left: 5%;
     transform: translate(-50%, -50%);
     font-size: 35px;
