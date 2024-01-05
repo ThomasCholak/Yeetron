@@ -10,7 +10,7 @@ body {  /* limits body to size of screen */
     color: whitesmoke;
     opacity: 1;  /* full opacity (100%) */
     position: fixed;
-    top: 400px;
+    top: 50%;
     left: 20%;
     transform: translate(-50%, -50%);
   }
@@ -19,7 +19,7 @@ body {  /* limits body to size of screen */
     position: fixed;
     color: whitesmoke;
     text-align: center;
-    top: 140%;
+    top: 1200px;  /* attempt to fix for larger monitors */
     left: 5%;
     transform: translate(-50%, -50%);
     font-size: 35px;
