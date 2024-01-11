@@ -4,11 +4,105 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dungeon</title>
-  <!--<link rel="stylesheet" href="styles.css">-->
+  <link rel="stylesheet" href="dun_styles.css">
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
+
+  <div class="tab">
+    <button class="tablinks" onclick="navigateTo('/')">Home</button>
+    <button class="tablinks" onclick="navigateTo('/AboutMe/about.html')">About</button>
+    <button class="tablinks" onclick="navigateTo('/Games/games.html')">Games</button>
+  </div>
+
+  <!-- scripts for opening links on button click -->
+  <script>
+    function navigateTo(url) {
+      window.location.href = url;
+    }
+  </script>
+
+<div class="row"> 
+  <div class="column">
+    <img onclick="centerImg(this)" onmouseover="enlargeImg(this)" onmouseout="resetImg(this)" src="images/image1.jpg" style="width:100%">
+    <img onmouseover="enlargeImg(this)" onmouseout="resetImg(this)" src="images/image2.jpg" style="width:100%">
+    <img onmouseover="enlargeImg(this)" onmouseout="resetImg(this)" src="images/image3.jpg" style="width:100%">
+    <img onmouseover="enlargeImg(this)" onmouseout="resetImg(this)" src="images/image4.jpg" style="width:100%">
+    <img onmouseover="enlargeImg(this)" onmouseout="resetImg(this)" src="images/image5.PNG" style="width:100%">
+    <img onmouseover="enlargeImg(this)" onmouseout="resetImg(this)" src="images/image6.jpg" style="width:100%">
+    <img onmouseover="enlargeImg(this)" onmouseout="resetImg(this)" src="images/image7.jpg" style="width:100%">
+    <img onmouseover="enlargeImg(this)" onmouseout="resetImg(this)" src="images/image27.PNG" style="width:100%">
+    <img onmouseover="enlargeImg(this)" onmouseout="resetImg(this)" src="images/akatsuki.gif" style="width:100%">
+  </div>
+  <div class="column">
+    <img onmouseover="enlargeImg(this)" onmouseout="resetImg(this)" src="images/image8.jpg" style="width:100%">
+    <img onmouseover="enlargeImg(this)" onmouseout="resetImg(this)" src="images/image9.PNG" style="width:100%">
+    <img onmouseover="enlargeImg(this)" onmouseout="resetImg(this)" src="images/image10.jpg" style="width:100%">
+    <img onmouseover="enlargeImg(this)" onmouseout="resetImg(this)" src="images/image11.jpg" style="width:100%">
+    <img onmouseover="enlargeImg(this)" onmouseout="resetImg(this)" src="images/image12.jpg" style="width:100%">
+    <img onmouseover="enlargeImg(this)" onmouseout="resetImg(this)" src="images/image13.jpg" style="width:100%">
+    <img onmouseover="enlargeImg(this)" onmouseout="resetImg(this)" src="images/image28.jpg" style="width:100%">
+    <img onmouseover="enlargeImg(this)" onmouseout="resetImg(this)" src="images/wiggle.gif" style="width:100%">
+  </div>  
+  <div class="column">
+    <img onmouseover="enlargeImg(this)" onmouseout="resetImg(this)" src="images/image14.jpg" style="width:100%">
+    <img onmouseover="enlargeImg(this)" onmouseout="resetImg(this)" src="images/image15.jpg" style="width:100%">
+    <img onmouseover="enlargeImg(this)" onmouseout="resetImg(this)" src="images/image16.jpg" style="width:100%">
+    <img onmouseover="enlargeImg(this)" onmouseout="resetImg(this)" src="images/image17.jpg" style="width:100%">
+    <img onmouseover="enlargeImg(this)" onmouseout="resetImg(this)" src="images/image18.jpg" style="width:100%">
+    <img onmouseover="enlargeImg(this)" onmouseout="resetImg(this)" src="images/image19.jpg" style="width:100%">
+    <img onmouseover="enlargeImg(this)" onmouseout="resetImg(this)" src="images/image20.jpg" style="width:100%">
+    <img onmouseover="enlargeImg(this)" onmouseout="resetImg(this)" src="images/image29.jpg" style="width:100%">
+  </div>
+  <div class="column">
+    <img onclick="centerImg(this)" onmouseover="enlargeImg(this)" onmouseout="resetImg(this)" src="images/image21.jpg" style="width:100%">
+    <img onmouseover="enlargeImg(this)" onmouseout="resetImg(this)" src="images/image22.jpg" style="width:100%">
+    <img onmouseover="enlargeImg(this)" onmouseout="resetImg(this)" src="images/image23.PNG" style="width:100%">
+    <img onmouseover="enlargeImg(this)" onmouseout="resetImg(this)" src="images/image24.jpg" style="width:100%">
+    <img onmouseover="enlargeImg(this)" onmouseout="resetImg(this)" src="images/image25.jpg" style="width:100%">
+    <img onmouseover="enlargeImg(this)" onmouseout="resetImg(this)" src="images/image26.jpg" style="width:100%">
+    <img onmouseover="enlargeImg(this)" onmouseout="resetImg(this)" src="images/image30.jpg" style="width:100%">
+    <img onmouseover="enlargeImg(this)" onmouseout="resetImg(this)" src="images/akatsukigif.GIF" style="width:100%">
+    <img onmouseover="enlargeImg(this)" onmouseout="resetImg(this)" src="images/wigglegirl.gif" style="width:100%">
+  </div>
+</div>
+
+<!-- https://www.geeksforgeeks.org/how-to-make-the-images-bigger-when-clicked/ -->
+<script>
+  setTimeout(function() {
+        img.click();
+    }, 25);
+
+  function enlargeImg(img) {
+      img.style.transform = "scale(1.1)";
+      img.style.transition = "transform 0.25s ease";
+      img.style.position = "relative";
+      img.style.zIndex = "2"; // sets higher z-index so enlarged image isn't covered
+  }
+  function resetImg(img) {
+      img.style.transform = "scale(1)";
+      img.style.transition = "transform 0.25s ease";
+      img.style.position = "static";
+      img.style.zIndex = "auto"; 
+  }
+  /*function centerImg(img) {
+    const maxScaleFactor = 0.2;
+
+    const maxScaleX = window.innerWidth / img.width * maxScaleFactor;
+    const maxScaleY = window.innerHeight / img.height * maxScaleFactor;
+
+    const maxScale = Math.min(maxScaleX, maxScaleY);
+
+    img.style.position = "fixed";
+    img.style.top = "50%";
+    img.style.left = "50%";
+    img.style.zIndex = "3"; 
+    img.style.transform = `translate(-50%, -50%) scale(${maxScale})`;
+}*/
+</script>
+
+<a href="https://yeetron.io"><h6>yeetron.io</h6></a> 
 
 </body>
 </html>
