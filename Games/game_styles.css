@@ -1,0 +1,102 @@
+
+* {
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Courier New', monospace;
+    margin: 0;
+  }
+
+  html, body {
+    width: 100vw;
+    height: 100vh;
+    font-size: 1000;
+  }
+  
+  /* animation code from: https://codepen.io/hylobates-lar/pen/qBbQeON */
+  body {
+      background: linear-gradient(-45deg, #614385, #662D8C, #ED1E79,#516395); /* background colors */
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+  }
+
+  .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  /* background color frames */
+  @keyframes gradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }
+
+  .center {  /* for centering picture */
+    display: flex;
+    align-items: center;
+    justify-content: center
+  }
+
+  .counter-display {
+    display: flex;
+    align-items: center;
+    justify-content: center
+  }
+
+    .tab {
+    overflow: hidden;
+    background-color: rgb(32,32,32);
+  }
+
+    .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+  
+    .tab button:hover {
+    background-color: rgb(8,8,8);
+  }
+  
+    .tab button.active {
+    background-color: rgb(32,32,32);
+  }
+
+  img {
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* CSS bouncing animation frames */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-60px);
+    }
+    60% {
+        transform: translateY(-30px);
+    }
+}
+
+.bounce {
+    animation: bounce 0.8s ease-in-out;
+}
+
+  
+  

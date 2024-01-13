@@ -9,7 +9,6 @@
   
   body {
     margin: 0;
-    font-family: Arial;
     background-color: rgb(16,16,16);
     background-image: linear-gradient(rgb(16,16,16),  rgb(48, 25, 52));  /* sets gradient on bottom of page */
   }

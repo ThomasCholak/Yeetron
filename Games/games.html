@@ -3,12 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Games</title>
-  <!--<link rel="stylesheet" href="styles.css">-->
+  <title>Dungeon</title>
+  <link rel="stylesheet" href="game_styles.css">
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
+  <div class="tab">
+    <button class="tablinks" onclick="navigateTo('/')">Home</button>
+    <button class="tablinks" onclick="navigateTo('/AboutMe/about.html')">About</button>
+    <button class="tablinks" onclick="navigateTo('/Dungeon/dungeon.html')">Enter the Dungeon</button>
+  </div>
+
+  <script type="module" src="game_app.js"></script>
+
+  <h1 class="counter-display">Jumps: 0</h1>
+
+  <div class="center">
+    <img src="goob.png" alt="goober" id="goobs">
+  </div>
+
+  <script>
+    function navigateTo(url) {
+      window.location.href = url;
+    }
+  </script>
 
 </body>
 </html>
