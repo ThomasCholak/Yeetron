@@ -26,7 +26,7 @@ body {  /* limits body to size of screen */
   }
 
   @media only screen and (max-width: 600px) {
-    #scrollText {
+    #fadingText, #scrollText {
         display: none; /* hides text for mobile users (at the moment) */
     }
 }
