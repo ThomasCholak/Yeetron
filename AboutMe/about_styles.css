@@ -19,12 +19,19 @@ body {  /* limits body to size of screen */
     position: fixed;
     color: whitesmoke;
     text-align: center;
-    top: 150vh; /* have to use vw to fix issue with monitor size */
+    top: 150vh; /* have to use vw to sorta fix issue with monitor size */
     left: 5%;
     transform: translate(-50%, -50%);
     font-size: 35px;
   }
 
+  @media only screen and (max-width: 600px) {
+    #scrollText {
+        display: none; /* hides text for mobile users (at the moment) */
+    }
+}
+
+  /* loading screen */
   #loading-screen {
     position: absolute;
     z-index: 2;
