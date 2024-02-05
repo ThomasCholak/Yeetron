@@ -1,6 +1,6 @@
-Please visit my website! (still a WIP:
+Please visit my website! (still a WIP):
 
-Live deployment can be located here: [yeetron.io] (https://yeetron.io/)
+Live deployment can be located here: [yeetron.io](https://yeetron.io/)
 
 Webpage home is here. This utilizes the latest three.js modeling code to extract various blender models I created. These models are interactive and will move interactively according to mouse movement. Mobile and desktop environments work, with different interfaces for both (coded with CSS and vanilla JS). A loading screen may appear briefly as 3D models generate.
 
